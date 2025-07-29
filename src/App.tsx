@@ -28,8 +28,8 @@ export default function AssemblyEndgame() {
   const isGameLost: boolean = wrongGuessCount >= numGuessesLeft;
   const isGameOver: boolean = isGameWon || isGameLost;
   const lastGuessedLetter: string = guessedLetters[guessedLetters.length - 1];
-  const isLastGuessIncorrect: boolean =
-    lastGuessedLetter && !currentWord.includes(lastGuessedLetter);
+  const isLastGuessIncorrect: boolean = 
+  Boolean(lastGuessedLetter) && !currentWord.includes(lastGuessedLetter);
 
   // Static values
   const alphabet = "abcdefghijklmnopqrstuvwxyz";
